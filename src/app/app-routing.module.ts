@@ -8,9 +8,9 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'/login', pathMatch:'full'},
-  {path:'login', component: LoginAreaComponent},
-  {path:'forgotpassword', component: EsqueciSenhaComponent},
-  {path:'home', component: HomeComponent}
+  {path:'login', component: LoginAreaComponent, title: 'Login'},
+  {path:'forgotpassword', component: EsqueciSenhaComponent, title:"Esqueci minha senha"},
+  {path:'home', component: HomeComponent, title:'Home'}
   // {path:'', loadChildren: ()=>LoginAreaModule}
   
 ];
