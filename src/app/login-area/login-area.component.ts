@@ -10,8 +10,9 @@ export class LoginAreaComponent {
    *
    */
   email: string;
+  senha: string;
   constructor() {
     this.email="";
-    
+    this.senha="";
   }
 }
