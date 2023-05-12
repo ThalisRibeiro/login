@@ -1,11 +1,17 @@
 
 <div class="login-area">
-    <mat-form-field>
-        <mat-label>E-mail</mat-label>
-        <input matInput placeholder="nome@provedor.com" [value]="email">
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Senha</mat-label>
-        <input matInput type="password" [value]="senha">
-      </mat-form-field>
+    <form>
+
+        <mat-form-field>
+            <mat-label>E-mail</mat-label>
+            <input matInput placeholder="nome@provedor.com" [value]="email">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Senha</mat-label>
+            <input matInput type="password" [value]="senha">
+        </mat-form-field>
+    </form>
+
+      <a mat-raised-button>login</a>
+      <a>esqueci minha senha</a>
 </div>
