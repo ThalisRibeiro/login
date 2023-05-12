@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-area',
@@ -11,8 +12,11 @@ export class LoginAreaComponent {
    */
   email: string;
   senha: string;
-  constructor() {
+  constructor(private router: Router) {
     this.email="";
     this.senha="";
+  }
+  login(){
+    this.router.navigate(['home'])
   }
 }
