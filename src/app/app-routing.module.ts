@@ -7,7 +7,8 @@ import { EsqueciSenhaComponent } from './login-area/esqueci-senha/esqueci-senha.
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  {path:'', component: LoginAreaComponent},
+  {path:'', redirectTo:'/login', pathMatch:'full'},
+  {path:'login', component: LoginAreaComponent},
   {path:'forgotpassword', component: EsqueciSenhaComponent},
   {path:'home', component: HomeComponent}
   // {path:'', loadChildren: ()=>LoginAreaModule}
