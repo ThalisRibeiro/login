@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
@@ -9,7 +10,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class EsqueciSenhaComponent implements OnInit {
  formulario: FormGroup;
  
- constructor(private formBuilder: FormBuilder) {
+ constructor(private formBuilder: FormBuilder, private location: Location) {
   this.formulario = this.formBuilder.group({
     email:[null]
    }) 
@@ -18,6 +19,12 @@ export class EsqueciSenhaComponent implements OnInit {
    
  }
  logForm(){
-  console.log(this.formulario.value)
+  console.log(this.formulario.value);
+  let valoresForm = this.formulario.value;
+  console.log(valoresForm.email);
+  this.voltar();
+ }
+ voltar(){
+  this.location.back();
  }
 }
