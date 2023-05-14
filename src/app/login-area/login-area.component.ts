@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,17 +7,26 @@ import { Router } from '@angular/router';
   templateUrl: './login-area.component.html',
   styleUrls: ['./login-area.component.css']
 })
-export class LoginAreaComponent {
+export class LoginAreaComponent implements OnInit{
   /**
    *
    */
-  email: string;
-  senha: string;
-  constructor(private router: Router) {
-    this.email="";
-    this.senha="";
+  formulario: FormGroup;
+
+  constructor(private router: Router, private formBuilder: FormBuilder) {
+    this.formulario = this.formBuilder.group({
+      email:[null],
+      senha:[null]
+    })
+  }
+  ngOnInit(): void {
+    // this.formulario = this.formBuilder.group({
+    //   email:[null],
+    //   senha:[null]
+    // })
   }
   login(){
+    console.log(this.formulario.value)
     this.router.navigate(['home'])
   }
 }

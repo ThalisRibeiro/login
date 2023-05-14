@@ -1,14 +1,14 @@
 
 <div class="login-area">
-    <form>
+    <form [formGroup]="formulario">
 
         <mat-form-field>
             <mat-label>E-mail</mat-label>
-            <input matInput placeholder="nome@provedor.com" [value]="email">
+            <input matInput placeholder="nome@provedor.com" formControlName="email">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Senha</mat-label>
-            <input matInput type="password" [value]="senha">
+            <input matInput type="password" formControlName="senha">
         </mat-form-field>
     </form>
 
