@@ -4,6 +4,7 @@
     <mat-form-field>
         <mat-label>E-mail</mat-label>
         <input matInput placeholder="nome@provedor.com" formControlName="email">
+        <mat-error *ngIf="formulario.get('email')?.invalid">{{getErrorMessage('email')}}</mat-error>
     </mat-form-field>
     <button mat-button (click)="logForm()">Enviar</button>
 </form>

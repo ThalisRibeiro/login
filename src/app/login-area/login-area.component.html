@@ -5,10 +5,13 @@
         <mat-form-field>
             <mat-label>E-mail</mat-label>
             <input matInput placeholder="nome@provedor.com" formControlName="email">
+            <mat-error *ngIf="formulario.get('email')?.invalid">{{getErrorMessage('email')}}</mat-error>
         </mat-form-field>
         <mat-form-field>
             <mat-label>Senha</mat-label>
-            <input matInput type="password" formControlName="senha">
+            <input matInput type="password" formControlName="senha" #senha>
+            <mat-error *ngIf="formulario.get('senha')?.invalid">{{getErrorMessage('senha')}}</mat-error>
+            <mat-hint *ngIf="senha.value.length<3" align="end">Senha precisa no minimo 3 caracteres</mat-hint>
         </mat-form-field>
     </form>
 
