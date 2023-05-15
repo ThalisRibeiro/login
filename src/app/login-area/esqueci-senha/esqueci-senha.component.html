@@ -1,10 +1,16 @@
-<p>Digite seu email para enviarmos sua nova senha!</p>
+<div class="area">
 
-<form [formGroup]="formulario">
-    <mat-form-field>
-        <mat-label>E-mail</mat-label>
-        <input matInput placeholder="nome@provedor.com" formControlName="email">
-        <mat-error *ngIf="formulario.get('email')?.invalid">{{getErrorMessage('email')}}</mat-error>
-    </mat-form-field>
-    <button mat-button (click)="logForm()">Enviar</button>
-</form>
+    <div class="form">
+        
+        <p>Digite seu email para enviarmos sua nova senha!</p>
+            
+        <form [formGroup]="formulario">
+            <mat-form-field>
+                <mat-label>E-mail</mat-label>
+                <input matInput placeholder="nome@provedor.com" formControlName="email">
+                <mat-error *ngIf="formulario.get('email')?.invalid">{{getErrorMessage('email')}}</mat-error>
+            </mat-form-field>
+            <button mat-button (click)="logForm()">Enviar</button>
+        </form>
+    </div>
+</div>

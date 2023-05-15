@@ -1,0 +1,19 @@
+.area{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(-135deg,#c850c0,#4158d0);
+    display: grid;
+    grid-template-columns: 45vw auto 45vw;
+    /* flex-direction: row; */
+    align-items: center;
+}
+.form{
+    grid-column: 2;
+    display: grid;
+    grid-auto-flow: row;
+    grid-area: span;
+    width: 40vw;
+    /* margin-top: 40vh;
+    margin-left: 30%;
+    margin-right: 30%;; */
+}

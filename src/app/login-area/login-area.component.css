@@ -1,0 +1,28 @@
+.area{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(-135deg,#c850c0,#4158d0);
+    display: grid;
+    grid-template-columns: 45vw auto 45vw;
+    /* flex-direction: row; */
+    align-items: center;
+}
+.login-area{
+    display: grid;
+    grid-column: 2;
+    /* border: 100px;
+    border-color: rgb(136, 141, 145); */
+    /* margin-top: 40vh; */
+    /* margin-left: 40vw;
+    margin-right: 45vw; */
+    /* grid-template-columns: 20vw,20vw;
+    grid-template-rows: 10vh, 15vh,5vh; */
+    grid-auto-flow: row;
+    /* background-color: aliceblue; */
+}
+h1{
+    text-align: center;
+}
+.email-senha{
+    margin-bottom: 3vh;
+}
