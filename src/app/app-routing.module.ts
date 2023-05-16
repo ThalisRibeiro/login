@@ -5,12 +5,14 @@ import { LoginAreaModule } from './login-area/login-area.module';
 import { LoginAreaComponent } from './login-area/login-area.component';
 import { EsqueciSenhaComponent } from './login-area/esqueci-senha/esqueci-senha.component';
 import { HomeComponent } from './home/home.component';
+import { CriaContaComponent } from './login-area/cria-conta/cria-conta.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'/login', pathMatch:'full'},
   {path:'login', component: LoginAreaComponent, title: 'Login'},
   {path:'forgotpassword', component: EsqueciSenhaComponent, title:"Esqueci minha senha"},
-  {path:'home', component: HomeComponent, title:'Home'}
+  {path:'home', component: HomeComponent, title:'Home'},
+  {path:'criaconta', component: CriaContaComponent, title:'Criar nova conta'}
   // {path:'', loadChildren: ()=>LoginAreaModule}
   
 ];

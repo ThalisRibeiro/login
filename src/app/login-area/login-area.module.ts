@@ -7,11 +7,12 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 
 import { LoginAreaComponent } from './login-area.component';
 import { EsqueciSenhaComponent } from './esqueci-senha/esqueci-senha.component';
+import { CriaContaComponent } from './cria-conta/cria-conta.component';
 
 
 
 @NgModule({
-  declarations: [LoginAreaComponent, EsqueciSenhaComponent],
+  declarations: [LoginAreaComponent, EsqueciSenhaComponent, CriaContaComponent],
   imports: [
     CommonModule,
     AppRoutingModule,
@@ -22,7 +23,8 @@ import { EsqueciSenhaComponent } from './esqueci-senha/esqueci-senha.component';
   ],
   exports:[
     LoginAreaComponent,
-    EsqueciSenhaComponent
+    EsqueciSenhaComponent,
+    CriaContaComponent
   ]
 })
 export class LoginAreaModule { }

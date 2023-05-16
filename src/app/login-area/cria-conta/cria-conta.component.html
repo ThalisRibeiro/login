@@ -6,6 +6,12 @@
         <form [formGroup]="formulario">
 
             <mat-form-field>
+                <mat-label>Nome</mat-label>
+                <input matInput placeholder="nome sobrenome" formControlName="nome">
+                <mat-error *ngIf="formulario.get('nome')?.invalid">{{getErrorMessage('nome')}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
                 <mat-label>E-mail</mat-label>
                 <input matInput placeholder="nome@provedor.com" formControlName="email">
                 <mat-error *ngIf="formulario.get('email')?.invalid">{{getErrorMessage('email')}}</mat-error>
@@ -19,9 +25,8 @@
         </form>
     </div>
     
-    <a mat-raised-button (click)="login()">login</a>
+    <a mat-raised-button (click)="criaConta()">Criar Conta</a>
     <a routerLink="/forgotpassword">esqueci minha senha</a>
-    <a routerLink="/criaconta">criar nova conta</a>
 </div>
 
 </div>
