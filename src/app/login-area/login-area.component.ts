@@ -33,7 +33,10 @@ export class LoginAreaComponent implements OnInit{
       this.api.Login(this.formulario.value.email, this.formulario.value.senha).subscribe(res=>{
         console.log(res);
         if(res.status == 200)
-        this.router.navigate(['home'])
+        this.router.navigate(['home'],{
+          state: {
+            message: res.message}
+        })
         else{
           alert(res.message)
         }
