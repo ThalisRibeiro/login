@@ -1,0 +1,20 @@
+.area{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(-135deg,#c850c0,#4158d0);
+    display: grid;
+    grid-template-columns: 45vw auto 45vw;
+    /* flex-direction: row; */
+    align-items: center;
+}
+.login-area{
+    display: grid;
+    grid-column: 2;
+    grid-auto-flow: row;
+}
+h1{
+    text-align: center;
+}
+.email-senha{
+    margin-bottom: 3vh;
+}
