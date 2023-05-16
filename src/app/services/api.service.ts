@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 @Injectable({
@@ -16,10 +16,9 @@ export class ApiService {
       email: email,
       senha: senha
     }
-    this.http.post(this.basehttp+"/criaconta",{
-      nome: nome,
-      email: email,
-      senha: senha
-    })
+    const headers = {'Content-Type': 'application/json'};
+    const body = JSON.stringify(Usuario)
+   
+   return this.http.post(this.basehttp+"/criaconta",body,{headers})
   }
 }
